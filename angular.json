@@ -22,12 +22,20 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+              	"glob": "**/*",
+              	"input": "./node_modules/pspdfkit/dist/pspdfkit-lib/",
+              	"output": "./assets/pspdfkit-lib/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -84,7 +92,12 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+              	"glob": "**/*",
+              	"input": "./node_modules/pspdfkit/dist/pspdfkit-lib/",
+              	"output": "./assets/pspdfkit-lib/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -94,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "56fbdf7d-a19d-4d48-9014-d0a3f25480d1"
   }
 }
